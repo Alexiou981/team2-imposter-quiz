@@ -1,10 +1,167 @@
-const Start = document.querySelector(".play-quiz-btn");
+document.addEventListener("DOMContentLoaded", () => {
+  const Start = document.querySelector(".play-quiz-btn");
+  const answerButtons = document.querySelectorAll(".answer-btn");
+  const questionText = document.getElementById("question-text");
+  const scoreElement = document.getElementById("score");
+  const progressBar = document.getElementById("progress-bar");
+  const currentQuestionElement = document.getElementById("current-question");
+  const totalQuestionsElement = document.getElementById("total-questions");
 
-Start.addEventListener("click", () => {
-    window.location.href = "game.html";
+
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let selectedQuestions = [];
+  const TOTAL_QUESTIONS = 5;
+
+/**
+ * Event listener for the Start button
+ * When clicked, it redirects to the game.html page.
+ */
+  if (Start) {
+      Start.addEventListener('click', () => {
+          window.location.href = "game.html";
+      });
+  }
+/**
+ * Event listener for the answer buttons
+ * When clicked, it checks the answer and updates the score.
+ */
+  if (answerButtons.length > 0) {
+      answerButtons.forEach(button => {
+          button.addEventListener('click', (e) => checkAnswer(e.target));
+      });
+  }
+
+/**
+ * Function to initialize the quiz
+ * It shuffles the questions, sets the score to 0, and displays the first question.
+ */
+  function initQuiz() {
+      selectedQuestions = shuffleArray(questions).slice(0, TOTAL_QUESTIONS);
+      totalQuestionsElement.textContent = TOTAL_QUESTIONS;
+
+      currentQuestionIndex = 0;
+      score = 0;
+      scoreElement.textContent = score;
+
+      showQuestion(selectedQuestions[currentQuestionIndex]);
+  }
+
+ /**
+  * Function to shuffle the questions array
+  */
+  function initQuiz() {
+      selectedQuestions = shuffleArray(questions).slice(0, TOTAL_QUESTIONS);
+      totalQuestionsElement.textContent = TOTAL_QUESTIONS;
+
+      currentQuestionIndex = 0;
+      score = 0;
+      scoreElement.textContent = score;
+
+      showQuestion(selectedQuestions[currentQuestionIndex]);
+  }
+
+/**
+ * Show the current question card
+ */
+
+  function showQuestion(question) {
+      questionText.textContent = question.question;
+      currentQuestionElement.textContent = currentQuestionIndex + 1;
+
+      const progress = ((currentQuestionIndex + 1) / TOTAL_QUESTIONS) * 100;
+      progressBar.style.width = `${progress}%`;
+
+      answerButtons.forEach((button, index) => {
+          button.textContent = question.answers[index];
+          button.dataset.correct = index === question.correctAnswer;
+          button.classList.remove('bg-green-500', 'bg-red-500', 'cursor-not-allowed');
+          button.disabled = false;
+      });
+  }
+
+  /**
+   * Check if selected answer is correct 
+   */
+
+  function checkAnswer(selectedButton) {
+      const isCorrect = selectedButton.dataset.correct === 'true';
+
+      answerButtons.forEach(button => {
+          button.disabled = true;
+          if (button.dataset.correct === 'true') {
+              button.classList.add('bg-green-500');
+          } else {
+              button.classList.add('bg-red-500');
+          }
+      });
+
+      if (isCorrect) {
+          score += 100;
+          scoreElement.textContent = score;
+      }
+
+      setTimeout(() => {
+          currentQuestionIndex++;
+          if (currentQuestionIndex < TOTAL_QUESTIONS) {
+              showQuestion(selectedQuestions[currentQuestionIndex]);
+          } else {
+              endQuiz();
+          }
+      }, 1000);
+  }
+
+/**
+ * Function to end the quiz
+ * It displays the final score and a button to restart the quiz.
+ */
+
+  function endQuiz() {
+      questionText.textContent = `Quiz Complete! Your Score: ${score}/${TOTAL_QUESTIONS * 100}`;
+      answerButtons.forEach(button => button.style.display = 'none');
+
+      const restartButton = document.createElement('button');
+      restartButton.textContent = 'Play Again';
+      restartButton.className = 'mt-4 bg-emerald-600 text-white py-2 px-6 rounded-lg hover:bg-emerald-700';
+      restartButton.addEventListener('click', initQuiz);
+      questionText.insertAdjacentElement('afterend', restartButton);
+  }
+
+  function shuffleArray(array) {
+      return array.sort(() => Math.random() - 0.5);
+  }
+
+  if (window.location.pathname.includes("game.html")) {
+      initQuiz();
+  }
 });
 
+/**
+ * Event listener for the Start button
+ * When clicked, it redirects to the game.html page.
+ */
+function endQuiz() {
+    questionText.textContent = `Quiz Complete! Your Score: ${score}/${TOTAL_QUESTIONS * 100}`;
+    answerButtons.forEach(button => button.style.display = 'none');
+    
 
+    const restartButton = document.createElement('button');
+    restartButton.textContent = 'Play Again';
+    restartButton.className = 'mt-4 bg-emerald-600 text-white py-2 px-6 rounded-lg hover:bg-emerald-700';
+    restartButton.addEventListener('click', initQuiz);
+    questionText.insertAdjacentElement('afterend', restartButton);
+}
+
+/**
+ * Shuffle the questions array
+ */
+function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+     
+/**
+ * Array of questions and answers
+ */
   const questions = [
     {
     question: "What is JavaScript primarily used for?",
