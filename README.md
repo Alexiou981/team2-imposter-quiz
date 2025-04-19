@@ -1,5 +1,5 @@
 # Confidence Compass
-[View the Live Project here]()
+[View the Live Project here](https://alexiou981.github.io/team2-imposter-quiz/)
 
 # Table of Content
 - [User Expeience](#user-experience)
@@ -56,9 +56,29 @@ The project's Kanban Board can be viewd [here](https://github.com/users/Alexiou9
 
 ## Game Logic
 
+<img src="docs/flowchart.png" width="200" alt="Game flowchart">
+
+How to play:
+        <ol>
+            <li>Click on the "Start" button.</li>
+            <li>Reply to the question.</li>
+            <li>You will receive immediate feedback.</li>
+            <li>Reply to the next question - there will only be five of them.</li>
+            <li>Bask in the immediate gratification of the relaxing atmosphere and the guilt-free pat on your back.</li>
+        </ol>
+
 ## Features
 
 ## Technologies Used
+
+- HTML, CSS and JavaScript were used as the languages.
+- [Pixabay](https://pixabay.com/) to downland the images for the logo.
+- [Favicon](https://favicon.io/) to create favicon.
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) to test style.css
+- [HTML Validator](https://validator.w3.org/) Markup Validation Service
+- Lighthouse Chrome Dev Tools for testing.
+- [GitHub](https://github.com/) to store the project and project board.
+- [Open AI](https://openai.com/chatgpt/overview/) to create questions.
 
 ## Code
 
@@ -78,10 +98,32 @@ The project's Kanban Board can be viewd [here](https://github.com/users/Alexiou9
 
 ## Deployment
 
+The website was deployed using GitHub Pages, which provides a simple way to host static websites directly from a GitHub repository. Below are the steps taken to deploy the project:
+
+1. Repository Setup
+- The project files were uploaded to a GitHub repository.
+- The main branch was used for deployment.
+
+2. Enabling GitHub Pages
+- In the repository settings, GitHub Pages was enabled.
+- The source branch was set to main.
+- The deployment was configured to serve files from the root directory.
+3. Accessing the Live Website
+- Once the deployment process was completed, the website became accessible at the provided GitHub Pages URL.
+- The link to the deployed site: https://alexiou981.github.io/team2-imposter-quiz/
+
+4. Updating the Website
+- Any changes pushed to the main branch automatically update the live website.
+- Regular updates are made using Git commits and pushes.
+
 ## Maintenance & Updates
 
 ## Credits
 
 ### Content
 
+The quiz questions were created using ChatGPT (OpenAI).
+
 ### Media
+
+Illustration by BiancaVanDijk — sourced from [Pixabay](https://pixabay.com/illustrations/to-think-to-care-depression-only-9440584/) — slightly modified.
