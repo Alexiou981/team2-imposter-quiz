@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Imposter Buster</title>
+</head>
+<body class="flex flex-col min-h-screen bg-black">
+    <header class="absolute inset-x-0 top-0 z-50">
+
+    </header>
+
+    <main class="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+              
+      <!-- Quiz Header Section -->
+              <div class="w-full max-w-3xl mb-8 text-center">
+                <h2 class="text-3xl font-bold text-emerald-500 mb-2">Confidence Compass</h2>
+        <!-- Score & Progress Section -->
+        <div class="w-full max-w-3xl flex flex-col items-center mb-8">
+            <!-- Progress Bar -->
+            <div class="w-full bg-gray-700 rounded-full h-3 mb-4">
+                <div id="progress-bar" 
+                     class="bg-emerald-500 h-3 rounded-full transition-all duration-300" 
+                     style="width: 20%"></div>
+            </div>
+            
+            <!-- Score Display -->
+            <div class="flex justify-between w-full mb-6">
+                <div class="text-white">
+                    <span class="font-semibold">Score: </span>
+                    <span id="score" class="text-emerald-400 font-bold">0</span>
+                </div>
+                <div class="text-gray-300">
+                    Question <span id="current-question">1</span>/<span id="total-questions">5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="w-full max-w-3xl bg-gray-800 rounded-xl shadow-lg p-6">
+            <h3 id="question-text" class="text-xl font-bold text-white mb-6">
+                Who is most likely to be the imposter?
+            </h3>
+            
+            <!-- Answer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
+                             transition-colors duration-200 border border-gray-600">
+                    Player A
+                </button>
+                <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
+                             transition-colors duration-200 border border-gray-600">
+                    Player B
+                </button>
+                <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
+                             transition-colors duration-200 border border-gray-600">
+                    Player C
+                </button>
+                <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
+                             transition-colors duration-200 border border-gray-600">
+                    Player D
+                </button>
+            </div>
+        </div>
+    </main>
+
+
+<script type="text/javascript">
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+<script src="assets/js/index.js"></script>
+</body>
+
+</html>
