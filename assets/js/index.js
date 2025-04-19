@@ -600,4 +600,364 @@ document.addEventListener("DOMContentLoaded", () => {
       correctAnswer: 3,
       wrongAnswer: [0, 2, 1],
     },
+    {
+      question: "What is the main purpose of writing code?",
+      answers: [
+        //Question 41
+        "To make computers do tasks",
+        "To confuse future developers",
+        "To create visual art",
+        "To crash your machine on purpose",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "Which of these is a common beginner programming language?",
+      answers: [
+        //Question 42
+        "Python",
+        "Klingon",
+        "Morse Code",
+        "Telepathy",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "Which of the following is an error type in coding?",
+      answers: [
+        //Question 43
+        "Syntax Error",
+        "Typo Attack",
+        "Bugstorm",
+        "Confusion Explosion",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "What does 'debugging' mean?",
+      answers: [
+        //Question 44
+        "Removing insects from your laptop",
+        "Fixing errors in code",
+        "Creating new errors",
+        "Upgrading your coffee",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What does HTML stand for?",
+      answers: [
+        //Question 45
+        "Happy Tech Makes Life",
+        "HyperText Markup Language",
+        "Home Tool Markup Language",
+        "High-Tech Machine Learning",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "Which of these symbols often ends a statement in JavaScript?",
+      answers: [
+        //Question 46
+        ". (full stop)",
+        "! (exclamation mark)",
+        "; (semicolon)",
+        "@ (at symbol)",
+      ],
+      correctAnswer: 2,
+      wrongAnswer: [0, 1, 3],
+    },
+    {
+      question: "What is the best way to learn coding?",
+      answers: [
+        //Question 47
+        "Memorising everything like a robot",
+        "Practice and making mistakes",
+        "Staring at the code until it makes sense",
+        "Avoiding it altogether",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "Who experiences imposter syndrome?",
+      answers: [
+        //Question 48
+        "Only beginners",
+        "Only experts",
+        "Everyone at some point",
+        "Only robots",
+      ],
+      correctAnswer: 2,
+      wrongAnswer: [0, 1, 3],
+    },
+    {
+      question: "What is console.log() used for in JavaScript?",
+      answers: [
+        //Question 49
+        "Sending emails",
+        "Logging messages to the console",
+        "Locking your computer",
+        "Printing real-world paper logs",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "Which of the following is part of the web development trio?",
+      answers: [
+        //Question 50
+        "Python, Java, Ruby",
+        "HTML, CSS, JavaScript",
+        "Google, Stack Overflow, Luck",
+        "Code, Coffee, Crying",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What is Git mostly used for?",
+      answers: [
+        //Question 51
+        "Drawing digital art",
+        "Tracking changes in code",
+        "Cooking recipes",
+        "Translating languages",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What’s the best response when you get stuck on a coding problem?",
+      answers: [
+        //Question 52
+        "Panic immediately",
+        "Give up and start a new hobby",
+        "Take a break or ask for help",
+        "Throw your computer out the window",
+      ],
+      correctAnswer: 2,
+      wrongAnswer: [0, 1, 3],
+    },
+    {
+      question: "What is Python known for?",
+      answers: [
+        //Question 53
+        "Being readable and beginner-friendly",
+        "Being written only by wizards",
+        "Making websites look pretty",
+        "Being the oldest language in the world",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "In programming, what’s a 'loop'?",
+      answers: [
+        //Question 54
+        "A ring-shaped snack",
+        "A tool for repeating code",
+        "A Wi-Fi password",
+        "A type of bug",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What’s the most important skill for a coder?",
+      answers: [
+        //Question 55
+        "Knowing all answers instantly",
+        "Googling, problem-solving, and patience",
+        "Memorising hundreds of commands",
+        "Psychic predictions",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What does CSS do in web development?",
+      answers: [
+        //Question 56
+        "Styles the appearance of a webpage",
+        "Compresses images",
+        "Builds the server",
+        "Handles database queries",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "When do professional coders stop learning?",
+      answers: [
+        //Question 57
+        "After 6 months",
+        "Never — the tech world always changes",
+        "Once they write their first 'Hello World'",
+        "On weekends only",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What is a variable in coding?",
+      answers: [
+        //Question 58
+        "A shape-shifting coffee cup",
+        "A container for storing data",
+        "A type of bug",
+        "A keyboard shortcut",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What do developers use Stack Overflow for?",
+      answers: [
+        //Question 59
+        "Buying snacks",
+        "Sharing and finding coding solutions",
+        "Reporting lost laptops",
+        "Learning magic tricks",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "Which of these feelings is common when learning code?",
+      answers: [
+        //Question 60
+        "Frustration",
+        "Curiosity",
+        "Imposter syndrome",
+        "All of the above",
+      ],
+      correctAnswer: 3,
+      wrongAnswer: [0, 1, 2],
+    },
+    {
+      question: "Why is making mistakes valuable when coding?",
+      answers: [
+        //Question 61
+        "It sharpens learning and problem-solving",
+        "It makes you look busy",
+        "It’s the only way to write code",
+        "It guarantees instant success",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "What does the if statement do?",
+      answers: [
+        //Question 62
+        "Makes decisions in code",
+        "Starts a computer fight",
+        "Prints text upside down",
+        "Changes your password",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "Is it normal to feel lost when learning new programming concepts?",
+      answers: [
+        //Question 63
+        "No, only the unmotivated feel lost",
+        "Yes, it’s part of the learning curve",
+        "Only on Mondays",
+        "Never — knowledge is instant",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "Why do developers write comments in code?",
+      answers: [
+        //Question 64
+        "To explain the code to others (and themselves)",
+        "To increase word count",
+        "To confuse future readers",
+        "To hide secret messages",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "What is 'open-source' software?",
+      answers: [
+        //Question 65
+        "Software anyone can view, use, and modify",
+        "Software that self-destructs",
+        "Software built by AI only",
+        "Software that only works on Tuesdays",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    },
+    {
+      question: "What do you call the process of turning human-readable code into machine-readable code?",
+      answers: [
+        //Question 66
+        "Baking",
+        "Compiling",
+        "Teleporting",
+        "Copy-pasting",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What is the output of print('Hello, World!') in Python?",
+      answers: [
+        //Question 67
+        "An email to your boss",
+        "Hello, World! in the console",
+        "A new website",
+        "A secret message",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What is an array?",
+      answers: [
+        //Question 68
+        "A type of raygun",
+        "A collection of items stored in a single variable",
+        "A pop-up message",
+        "A kind of sandwich",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "Which of these is true about learning code?",
+      answers: [
+        //Question 69
+        "You must understand everything before starting",
+        "Mistakes are part of the process",
+        "Only geniuses can learn to code",
+        "You must code without coffee",
+      ],
+      correctAnswer: 1,
+      wrongAnswer: [0, 2, 3],
+    },
+    {
+      question: "What does return do in most programming languages?",
+      answers: [
+        //Question 70
+        "Sends data back from a function",
+        "Refunds your computer",
+        "Prints a document",
+        "Spins your chair",
+      ],
+      correctAnswer: 0,
+      wrongAnswer: [1, 2, 3],
+    }
   ];
