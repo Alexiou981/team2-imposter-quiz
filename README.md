@@ -83,7 +83,7 @@ How to play:
 
 ## Technologies Used
 
-- HTML, CSS and JavaScript were used as the languages.
+- HTML, Tailwind CSS and JavaScript were used as the languages.
 - [Pixabay](https://pixabay.com/) to downland the images for the logo and the background.
 - [Favicon](https://favicon.io/) to create favicon.
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) to test style.css
