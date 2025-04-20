@@ -4,16 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Imposter Buster</title>
+    <title>Quiz Game - Confidence Compass</title>
 </head>
-<body class="flex flex-col min-h-screen bg-black">
-    <header class="absolute inset-x-0 top-0 z-50">
+<body>
+    <div class="bg-black min-h-screen">
+        <header class="absolute inset-x-0 top-0 z-50">
+          <nav class="flex items-center justify-between p-6 lg:px-8 bg-emerald-500" aria-label="Global">
+            <div class="flex lg:flex-1">
+              <a href="./index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Confidence Compass</span>
+                <!--Logo-->
+                <img class="h-8 w-auto" src="assets/images/logo.png" alt="A hand gently pulling on the tangled thread inside the head">
+              </a>
+            </div>
+            <div class="flex lg:hidden">
+              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" id="open-menu-button">
+                <span class="sr-only">Open main menu</span>
+                <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+              <a href="/team2-imposter-quiz/index.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Home</a>
+              <a href="/team2-imposter-quiz/instructions.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Game Rules</a>
+              <a href="/team2-imposter-quiz/success_stories.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Daily Motivation</a>
+              <a href="/team2-imposter-quiz/achievement.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Your Achievements</a>
+              <a href="/team2-imposter-quiz/about.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">About</a>
+            </div>
+          </nav>
+          <!-- Mobile menu, show/hide based on menu open state. -->
+          <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
+            <!-- Background backdrop -->
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <div class="flex items-center justify-between">
+                <a href="./index.html" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Imposter Buster</span>
+                  <img class="h-8 w-auto" src="./assets/images/logo-white.png" alt="A hand gently pulling on the tangled thread inside the head">
+                </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-300 hover:text-white" id="close-menu-button">
+                  <span class="sr-only">Close menu</span>
+                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-700">
+                  <div class="space-y-2 py-6">
+                    <a href="/team2-imposter-quiz/index.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Home</a>
+                    <a href="/team2-imposter-quiz/instructions.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Game Rules</a>
+                    <a href="/team2-imposter-quiz/success_stories.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Daily Motivation</a>
+                    <a href="/team2-imposter-quiz/achievement.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">Your Achievements</a>
+                    <a href="/team2-imposter-quiz/about.html" class="text-sm/6 font-semibold text-white hover:text-gray-300">About</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
 
-    </header>
-
-    <main class="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+    <main class="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-8 pt-24 pb-12 mt-16">
               
       <!-- Quiz Header Section -->
               <div class="w-full max-w-3xl mb-8 text-center">
@@ -49,29 +103,45 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
                              transition-colors duration-200 border border-gray-600">
-                    Player A
+                    A
                 </button>
                 <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
                              transition-colors duration-200 border border-gray-600">
-                    Player B
+                    B
                 </button>
                 <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
                              transition-colors duration-200 border border-gray-600">
-                    Player C
+                    C
                 </button>
                 <button class="answer-btn bg-gray-700 hover:bg-gray-600 text-white py-3 px-4 rounded-lg 
                              transition-colors duration-200 border border-gray-600">
-                    Player D
+                    D
                 </button>
+                <div id="feedback" class="hidden mt-4 text-center text-sm italic"></div>
             </div>
+            <br>
+            <button class="bg-red-700 hover:bg-grey-600 text-white py-3 px-4 rounded-lg
+            transition-colors duration-200 border border-gray-600"><a href="index.html">Exit</a></button>
+            
+            <button class="bg-green-700 hover:bg-grey-600 text-white py-3 px-4 rounded-lg
+            transition-colors duration-200 border border-gray-600 next-btn hidden">Next</button>
         </div>
     </main>
 
-
-<script type="text/javascript">
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
 <script src="assets/js/index.js"></script>
+<script type="text/javascript">
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuButton = document.getElementById('close-menu-button');
+  const openMenuButton = document.getElementById('open-menu-button');
+
+  openMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  closeMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+</script>
 </body>
 
 </html>
