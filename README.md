@@ -1,5 +1,8 @@
 # Confidence Compass
-[View the Live Project here](https://alexiou981.github.io/team2-imposter-quiz/)
+
+![Am I responsive](assets/images/am-i-responsive.png)
+
+View the Live Project [here](https://alexiou981.github.io/team2-imposter-quiz/)
 
 # Table of Content
 - [User Expeience](#user-experience)
@@ -60,6 +63,8 @@ The image was chosen as the logo because it perfectly represents the concept of 
 
 #### Home wireframe
 
+The Home page wireframe was created as the base design, and all other pages maintain a consistent layout and visual style.
+
 ![home wireframe](docs/home-wireframe.png)
 
 #### Game wireframe
@@ -81,6 +86,52 @@ How to play:
 
 ## Features
 
+All pages share the same navigation bar, which includes a logo and six links leading to different sections of the website. On smaller devices, the navigation collapses into a burger menu for better usability.
+
+The website consists of six pages, accessible via both the navigation bar and the footer: Home, About, Game Rules, Daily Motivation, and Your Achievements.
+The Game page is only accessible via the Play Quiz button on the Home page, and the 404 Page is not directly accessible.
+
+Every page uses a consistent colour scheme and layout to ensure a unified look and feel.
+
+
+🌐 Home Page
+
+The landing page features:
+
+- A link at the top directing users to an external article on Psychology Today about tackling impostor syndrome.
+
+- A large heading and a short paragraph encouraging users to take part in the quiz.
+
+- A Play Quiz button which leads directly to the Game page.
+
+🎮 Game Page
+
+- The player is presented with four questions, which can be answered by clicking or tapping (on mobile).
+
+- An Exit button allows the player to leave the quiz at any moment.
+
+- This is the only page without a footer, to maximise space for gameplay on smaller screens.
+
+👥 About Page
+
+- Displays photos of the team members who took part in the hackathon, each with a short description.
+
+- Includes a paragraph explaining why this particular theme was chosen for the project.
+
+💡 Daily Motivation Page
+
+- Features a collection of motivational quotes to inspire and uplift users.
+
+🏆 Your Achievements Page
+
+- Displays the player’s achievements for the current day.
+
+- Below that, shows the player’s achievements accumulated over the week.
+
+🔗 Footer
+
+- The footer is identical across all pages and contains the website name, social media links (which open in a new tab), and a repeat of the navigation links for easy access.
+
 ## Technologies Used
 
 - HTML, Tailwind CSS and JavaScript were used as the languages.
@@ -94,6 +145,7 @@ How to play:
 - [Photopea](https://www.photopea.com/) to create the logo.
 - [Birme](https://www.birme.net/) to resize images.
 - [Canva](https://www.canva.com/) to design wireframes.
+- [Am I responsive](https://ui.dev/amiresponsive) to create responsive mockups.
 
 ## Code
 
@@ -137,7 +189,7 @@ The website was deployed using GitHub Pages, which provides a simple way to host
 
 ### Content
 
-The quiz questions were created using ChatGPT (OpenAI).
+The quiz questions were created using [ChatGPT (OpenAI)](https://openai.com/chatgpt/overview/). The content was reviewed for spelling, grammar and consistency, and enhanced with the help of ChatGPT. Some sections were also translated and refined to improve readability.
 
 ### Media
 
