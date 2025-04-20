@@ -153,8 +153,12 @@ if (window.location.pathname.includes("game.html")) {
     }, 5000);
 }
 
+
+/**
+ * Event listener for the next button
+ * Hide the next button and show the next question
+ */
 nextButton.addEventListener("click", () => {
-  // Hide Next button
   nextButton.classList.add("hidden");
   
   currentQuestionIndex++;
