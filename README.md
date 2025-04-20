@@ -54,6 +54,14 @@ The project's Kanban Board can be viewd [here](https://github.com/users/Alexiou9
 
 ### Wireframes
 
+#### Home wireframe
+
+![home wireframe](docs/home-wireframe.png)
+
+#### Game wireframe
+
+![game wireframe](docs/game-wireframe.png)
+
 ## Game Logic
 
 <img src="docs/flowchart.png" width="200" alt="Game flowchart">
