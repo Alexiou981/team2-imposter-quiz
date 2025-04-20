@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentQuestionElement = document.getElementById("current-question");
   const totalQuestionsElement = document.getElementById("total-questions");
   const feedbackElement = document.getElementById("feedback");
+  const nextButton = document.querySelector(".next-btn")
 
 
   let currentQuestionIndex = 0;
@@ -15,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const TOTAL_QUESTIONS = 5;
   
   /**
-   * 
    * Shuffle the array
    */
   function shuffleArray(array) {
@@ -70,7 +70,6 @@ if (window.location.pathname.includes("game.html")) {
 }
 
 /**
- * 
  * Show the current question
  * Update the question text, progress bar, and answer buttons
  */
@@ -129,6 +128,8 @@ if (window.location.pathname.includes("game.html")) {
         }
     });
 
+    nextButton.classList.remove("hidden");
+
     const feedbackElement = document.getElementById('feedback');
     feedbackElement.textContent = isCorrect 
         ? currentQuestion.feedback.correct 
@@ -149,8 +150,25 @@ if (window.location.pathname.includes("game.html")) {
         } else {
             endQuiz();
         }
-    }, 2000);
+    }, 5000);
 }
+
+
+/**
+ * Event listener for the next button
+ * Hide the next button and show the next question
+ */
+nextButton.addEventListener("click", () => {
+  nextButton.classList.add("hidden");
+  
+  currentQuestionIndex++;
+  if (currentQuestionIndex < selectedQuestions.length) {
+      showQuestion(selectedQuestions[currentQuestionIndex]);
+  } else {
+      endQuiz();
+  }
+});
+
 
 /**
  * End the quiz and show final score
