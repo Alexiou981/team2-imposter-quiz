@@ -52,6 +52,10 @@ The project's Kanban Board can be viewd [here](https://github.com/users/Alexiou9
 
 #### Images
 
+<img src="assets/images/logo.png" width="100" alt="Logo - A hand gently pulling on the tangled thread inside the head">
+<img src="assets/images/logo-white.png" width="100" alt="Logo - A hand gently pulling on the tangled thread inside the head">
+The image was chosen as the logo because it perfectly represents the concept of imposter syndrome. The tangled scribble inside the head visually conveys the confusion and self-critical thoughts often experienced in this state of mind. The hand gently pulling on the thread symbolises the process of unravelling these thoughts, highlighting the journey of overcoming imposter syndrome. The logo has been designed in both white and black styles, with a transparent background. This allows the appropriate version to be selected based on the background colour of the website.
+
 ### Wireframes
 
 #### Home wireframe
@@ -80,13 +84,16 @@ How to play:
 ## Technologies Used
 
 - HTML, CSS and JavaScript were used as the languages.
-- [Pixabay](https://pixabay.com/) to downland the images for the logo.
+- [Pixabay](https://pixabay.com/) to downland the images for the logo and the background.
 - [Favicon](https://favicon.io/) to create favicon.
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) to test style.css
 - [HTML Validator](https://validator.w3.org/) Markup Validation Service
 - Lighthouse Chrome Dev Tools for testing.
 - [GitHub](https://github.com/) to store the project and project board.
 - [Open AI](https://openai.com/chatgpt/overview/) to create questions.
+- [Photopea](https://www.photopea.com/) to create the logo.
+- [Birme](https://www.birme.net/) to resize images.
+- [Canva](https://www.canva.com/) to design wireframes.
 
 ## Code
 
@@ -135,3 +142,5 @@ The quiz questions were created using ChatGPT (OpenAI).
 ### Media
 
 Illustration by BiancaVanDijk — sourced from [Pixabay](https://pixabay.com/illustrations/to-think-to-care-depression-only-9440584/) — slightly modified.
+
+Image for the background - [Pixabay](https://pixabay.com/photos/mask-ceramic-performing-arts-208942/)
