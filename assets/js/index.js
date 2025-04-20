@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const Start = document.querySelector(".play-quiz-btn");
+  const startBtn = document.querySelector(".play-quiz-btn");
   const answerButtons = document.querySelectorAll(".answer-btn");
   const questionText = document.getElementById("question-text");
   const scoreElement = document.getElementById("score");
@@ -7,92 +7,98 @@ document.addEventListener('DOMContentLoaded', function() {
   const currentQuestionElement = document.getElementById("current-question");
   const totalQuestionsElement = document.getElementById("total-questions");
   const feedbackElement = document.getElementById("feedback");
-  const nextButton = document.querySelector(".next-btn")
-
+  const nextButton = document.querySelector(".next-btn");
 
   let currentQuestionIndex = 0;
   let score = 0;
   let selectedQuestions = [];
   const TOTAL_QUESTIONS = 5;
-  
+
   /**
    * Shuffle the array
    */
   function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
-}
+  }
 
-/**
- * Event listener for the start button
- */
-if (Start) {
-    Start.addEventListener('click', () => {
-        window.location.href = "game.html";
+  /**
+  * Event listener for the start button
+   */
+  if (startBtn) {
+    startBtn.addEventListener('click', () => {
+      window.location.href = "game.html";
     });
-}
-/**
- * Event listener for answer buttons
- */
-answerButtons.forEach(button => {
+  }
+
+  /**
+   * Event listener for answer buttons
+   */
+  answerButtons.forEach(button => {
     button.addEventListener('click', (e) => checkAnswer(e.currentTarget));
-});
+  });
 
-/**
+  /**
  * Initialize the quiz
- */
-if (window.location.pathname.includes("game.html")) {
+   */
+  if (window.location.pathname.includes("game.html")) {
     initQuiz();
-};
+  }
 
-/**
+  /**
  * Initialize the quiz
  * Shuffle the questions and select a subset
- */
+   */
   function initQuiz() {
     selectedQuestions = shuffleArray(questions).slice(0, TOTAL_QUESTIONS);
     totalQuestionsElement.textContent = TOTAL_QUESTIONS;
-    
     currentQuestionIndex = 0;
     score = 0;
     scoreElement.textContent = score;
-    
-    answerButtons.forEach(button => {
-        button.style.display = '';
-        button.classList.remove(
-            "bg-green-500", "border-green-400",
-            "bg-red-500", "border-red-400",
-            "opacity-70", "cursor-not-allowed"
-        );
-        button.disabled = false;
-    });
-    
-    showQuestion(selectedQuestions[currentQuestionIndex]);
-}
 
-/**
+    // Reset styling & state on all answer buttons
+    answerButtons.forEach(button => {
+      button.style.display = '';
+      button.classList.remove(
+        "bg-green-500", "border-green-400",
+        "bg-red-500", "border-red-400",
+        "opacity-70", "cursor-not-allowed"
+      );
+      button.disabled = false;
+    });
+
+    // Hide Next until an answer is given
+    nextButton.classList.add('hidden');
+    showQuestion(selectedQuestions[currentQuestionIndex]);
+  }
+
+  /**
  * Show the current question
  * Update the question text, progress bar, and answer buttons
- */
+   */
   function showQuestion(question) {
+    // Reset button styles and enable them
     answerButtons.forEach(button => {
-        button.classList.remove(
-            "bg-green-500", "border-green-400",
-            "bg-red-500", "border-red-400",
+      button.classList.remove(
+        "bg-green-500", "border-green-400",
+        "bg-red-500", "border-red-400",
             "opacity-70", "cursor-not-allowed"
-        );
-        button.disabled = false;
+      );
+      button.disabled = false;
     });
-  
+
+    // Update question text and number
     questionText.textContent = question.question;
     currentQuestionElement.textContent = currentQuestionIndex + 1;
-    
+
     const progress = ((currentQuestionIndex + 1) / TOTAL_QUESTIONS) * 100;
     progressBar.style.width = `${progress}%`;
-    
+
+    // Populate answer buttons
     answerButtons.forEach((button, index) => {
-        button.textContent = question.answers[index];
+      button.textContent = question.answers[index];
     });
-    
+
+    // Hide any leftover feedback
     feedbackElement.classList.add('hidden');
   }
 
@@ -106,107 +112,84 @@ if (window.location.pathname.includes("game.html")) {
     const selectedIndex = Array.from(answerButtons).indexOf(selectedButton);
     const isCorrect = selectedIndex === currentQuestion.correctAnswer;
 
-    answerButtons.forEach(button => {
-        button.classList.remove(
-            "bg-green-500", "border-green-400",
-            "bg-red-500", "border-red-400",
-            "opacity-70"
-        );
-    });
+    // Clear previous styling
+    answerButtons.forEach(button => button.classList.remove(
+      "bg-green-500", "border-green-400",
+      "bg-red-500", "border-red-400",
+      "opacity-70"
+    ));
 
+    // Disable buttons and mark correct vs incorrect
     answerButtons.forEach((button, index) => {
-        button.disabled = true;
-        
-        if (index === currentQuestion.correctAnswer) {
-            button.classList.add("bg-green-500", "border-green-400");
-        } 
-        else if (index === selectedIndex && !isCorrect) {
-            button.classList.add("bg-red-500", "border-red-400");
-        }
-        else {
-            button.classList.add("opacity-70");
-        }
+      button.disabled = true;
+      if (index === currentQuestion.correctAnswer) {
+        button.classList.add("bg-green-500", "border-green-400");
+      } else if (index === selectedIndex && !isCorrect) {
+        button.classList.add("bg-red-500", "border-red-400");
+      } else {
+        button.classList.add("opacity-70");
+      }
     });
 
+    // Reveal Next button
     nextButton.classList.remove("hidden");
 
-    const feedbackElement = document.getElementById('feedback');
+    // Display feedback message
     feedbackElement.textContent = isCorrect 
-        ? currentQuestion.feedback.correct 
-        : `${currentQuestion.feedback.incorrect} The correct answer was: ${currentQuestion.answers[currentQuestion.correctAnswer]}`;
+      ? currentQuestion.feedback.correct 
+      : `${currentQuestion.feedback.incorrect} The correct answer was: ${currentQuestion.answers[currentQuestion.correctAnswer]}`;
     feedbackElement.className = isCorrect ? 'text-green-400' : 'text-red-400';
     feedbackElement.classList.remove('hidden');
 
+    // Update score if correct
     if (isCorrect) {
-        score += 100;
-        scoreElement.textContent = score;
+      score += 100;
+      scoreElement.textContent = score;
     }
+  }
 
-    setTimeout(() => {
-        feedbackElement.classList.add('hidden');
-        currentQuestionIndex++;
-        if (currentQuestionIndex < selectedQuestions.length) {
-            showQuestion(selectedQuestions[currentQuestionIndex]);
-        } else {
-            endQuiz();
-        }
-    }, 5000);
-}
-
-
-/**
+  /**
  * Event listener for the next button
  * Hide the next button and show the next question
- */
-nextButton.addEventListener("click", () => {
-  nextButton.classList.add("hidden");
-  
-  currentQuestionIndex++;
-  if (currentQuestionIndex < selectedQuestions.length) {
+   */
+  nextButton.addEventListener("click", () => {
+    nextButton.classList.add("hidden");
+    feedbackElement.classList.add('hidden');
+    currentQuestionIndex++;
+    if (currentQuestionIndex < selectedQuestions.length) {
       showQuestion(selectedQuestions[currentQuestionIndex]);
-  } else {
+    } else {
       endQuiz();
-  }
-});
-
-
-/**
- * End the quiz and show final score
- */
-
-function endQuiz() {
-  questionText.textContent = `Quiz Complete! Your Score: ${score}/${TOTAL_QUESTIONS * 100}`;
-  answerButtons.forEach(button => {
-      button.style.display = 'none';
-      button.classList.remove(
-          "bg-green-500", "border-green-400",
-          "bg-red-500", "border-red-400",
-          "opacity-70", "cursor-not-allowed"
-      );
-      button.disabled = false;
+    }
   });
-  
-  if (!document.querySelector('.restart-button')) {
+
+  /**
+ * End the quiz and show final score
+   */
+  function endQuiz() {
+    questionText.textContent = `Quiz Complete! Your Score: ${score}/${TOTAL_QUESTIONS * 100}`;
+    answerButtons.forEach(button => {
+      button.style.display = 'none';
+      button.disabled = false;
+      button.classList.remove(
+        "bg-green-500", "border-green-400",
+        "bg-red-500", "border-red-400",
+        "opacity-70", "cursor-not-allowed"
+      );
+    });
+
+    // Add a restart button if one doesn't exist
+    if (!document.querySelector('.restart-button')) {
       const restartButton = document.createElement('button');
       restartButton.textContent = 'Play Again';
       restartButton.className = 'restart-button mt-4 bg-emerald-600 text-white py-2 px-6 rounded-lg hover:bg-emerald-700';
       restartButton.addEventListener('click', () => {
-          answerButtons.forEach(button => {
-              button.style.display = '';
-              button.classList.remove(
-                  "bg-green-500", "border-green-400",
-                  "bg-red-500", "border-red-400",
-                  "opacity-70", "cursor-not-allowed"
-              );
-              button.disabled = false;
-          });
-          
-          restartButton.remove();
-          initQuiz();
+        restartButton.remove();
+        initQuiz();
       });
       questionText.insertAdjacentElement('afterend', restartButton);
+    }
   }
-}
 
 });
 
