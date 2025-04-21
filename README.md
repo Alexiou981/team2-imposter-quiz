@@ -49,9 +49,9 @@ The project's Kanban Board can be viewd [here](https://github.com/users/Alexiou9
 
 ### Design Choices
 
-#### Fonts
+#### Colours
 
-#### Icons
+<img src="docs/confidence-compass.png" width="400" alt="Colour palette">
 
 #### Images
 
