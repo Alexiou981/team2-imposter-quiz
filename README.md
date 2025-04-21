@@ -135,17 +135,6 @@ The landing page features:
 ## Technologies Used
 
 - HTML, Tailwind CSS and JavaScript were used as the languages.
-- [Pixabay](https://pixabay.com/) to downland the images for the logo and the background.
-- [Favicon](https://favicon.io/) to create favicon.
-- [CSS Validator](https://jigsaw.w3.org/css-validator/) to test style.css
-- [HTML Validator](https://validator.w3.org/) Markup Validation Service
-- Lighthouse Chrome Dev Tools for testing.
-- [GitHub](https://github.com/) to store the project and project board.
-- [Open AI](https://openai.com/chatgpt/overview/) to create questions.
-- [Photopea](https://www.photopea.com/) to create the logo.
-- [Birme](https://www.birme.net/) to resize images.
-- [Canva](https://www.canva.com/) to design wireframes.
-- [Am I responsive](https://ui.dev/amiresponsive) to create responsive mockups.
 
 ## Code
 
@@ -223,6 +212,21 @@ The website was deployed using GitHub Pages, which provides a simple way to host
 ## Maintenance & Updates
 
 ## Credits
+
+### Tools
+
+- [Pixabay](https://pixabay.com/) to downland the images for the logo and the background.
+- [Favicon](https://favicon.io/) to create favicon.
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) to test style.css
+- [HTML Validator](https://validator.w3.org/) Markup Validation Service
+- Lighthouse Chrome Dev Tools for testing.
+- [GitHub](https://github.com/) to store the project and project board.
+- [Open AI](https://openai.com/chatgpt/overview/) to create questions.
+- [Firefly] ()
+- [Photopea](https://www.photopea.com/) to create the logo.
+- [Birme](https://www.birme.net/) to resize images.
+- [Canva](https://www.canva.com/) to design wireframes.
+- [Am I responsive](https://ui.dev/amiresponsive) to create responsive mockups.
 
 ### Content
 
