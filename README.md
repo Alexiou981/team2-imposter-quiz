@@ -152,16 +152,53 @@ The landing page features:
 ## Testing
 
 ### Bugs
+- Non applicable
 
 ### Unresolved Bugs
-
-### Testing User Stories
+- Non applicable
 
 ### Manual Testing
+#### Tested navbar functionality
+##### Expected Outcome: 
+- User must be able to easily navigate through the page using the navbar - all links must be functional.
 
-### Automated Testing
+##### Testing: 
+- Navigate on the deployed site, try accessing all available pages on tha navbar by clicking on each page, returning back to home and then clickin on the next to test that all links work for index.html.
+- Follow the same process for each html file to ensure that links are working in all available pages.
 
-### Accessibility
+##### Result:
+- User gets successfully redirected to the appropriate pages - test works ✅
+
+
+#### Tested navbar on smaller screens
+##### Expected Outcome:
+- The navbar should be hidden in a dropdown on smaller screen sizes, the pages shoud be displayed in a columb inside the dropdown box and direct user to each page available.
+
+##### Testing: 
+- Either go on a mobile device or using Chrome's Inspect tool, access the site in tablet or mobile screen size and click on the burger icon, then choose one of the available pages, once redirected to the appropriate page open the dropdown and try another page until all pages have been tested.
+
+##### Result:
+- user gets successfully redirected to the appropriate pages - test works ✅
+
+#### Tested game functionality
+##### Expected Outcome:
+- Upon landing on the Game page the user get's prompted to reply to a question using four possible option, once they have selected an answer they should receive immediate feedback and the option to move onto the next question. Once the player has reached question 5 they should have an option to exit or restart the game.
+
+##### Testing: 
+- Player starts the game by choosing an answer, clicking on the Next button and proceeding till the end of the game.
+
+##### Result:
+- Users gets displayed with the first question and the game begins, once an answer is picked there is immediate feeback displayed and a little text encouraging the user -  works as expected ✅
+
+#### Tested daily motivation functionality
+##### Expected Outcome:
+- The user arrives on the Daily Motivation page and clicks on the Motivate me button, a motivational quote is displayed, if they need more they click the button again and it refreshes with a new quote.
+
+##### Testing:
+- Player arrives on the page and click on Motivate Me button.
+
+##### Result:
+- Motivational quotes are being displayed successfully - works as expected ✅
 
 ## Deployment
 
