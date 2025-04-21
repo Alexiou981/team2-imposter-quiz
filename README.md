@@ -152,7 +152,7 @@ The landing page features:
 - User must be able to easily navigate through the page using the navbar - all links must be functional.
 
 ##### Testing: 
-- Navigate on the deployed site, try accessing all available pages on tha navbar by clicking on each page, returning back to home and then clickin on the next to test that all links work for index.html.
+- Navigate on the deployed site, try accessing all available pages on tha navbar by clicking on each page, returning back to home and then clicking on the next to test that all links work for index.html.
 - Follow the same process for each html file to ensure that links are working in all available pages.
 
 ##### Result:
